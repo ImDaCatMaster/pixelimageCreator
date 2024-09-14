@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Grid</title>
+        <link rel="stylesheet" href="colorGrid.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="grid">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+                <div class="square" id="10"></div>
+                <div class="square" id="11"></div>
+                <div class="square" id="12"></div>
+                <div class="square" id="13"></div>
+                <div class="square" id="14"></div>
+                <div class="square" id="15"></div>
+                <div class="square" id="16"></div>
+            </div>
+        </div>
+        <canvas id="myCanvas"></canvas>
+
+        <div id="settings">
+            <fieldset>
+                <legend>Size</legend>
+                <label>Width:</label>
+                <select id="width">
+                    <option value="1">1 square</option>
+                    <option value="2">2 squares</option>
+                    <option value="3">3 squares</option>
+                    <option selected value="4">4 squares</option>
+                    <option value="5">5 squares</option>
+                    <option value="6">6 squares</option>
+                    <option value="7">7 squares</option>
+                    <option value="8">8 squares</option>
+                </select>
+                <br>
+                <label>Height:</label>
+                <select id="height">
+                    <option value="1">1 square</option>
+                    <option value="2">2 squares</option>
+                    <option value="3">3 squares</option>
+                    <option selected value="4">4 squares</option>
+                    <option value="5">5 squares</option>
+                    <option value="6">6 squares</option>
+                    <option value="7">7 squares</option>
+                    <option value="8">8 squares</option>
+                </select>
+            </fieldset>
+    
+            <fieldset id="select">
+                <legend>Selecting Options</legend>
+                <input type="radio" name="selecting" id="both" checked value="both">
+                <label for="both" class="outline highlight">Highlight & Outline</label><br>
+    
+                <input type="radio" name="selecting" id="highlight" value="highlight">
+                <label for="highlight" class="highlight">Highlight</label><br>
+    
+                <input type="radio" name="selecting" id="outline" value="outline">
+                <label for="outline" class="outline">Outline</label><br>
+    
+                <input type="radio" name="selecting" id="none" value="none">
+                <label for="none" class="none">No Marker</label>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Export</legend>
+                <label>File Name:</label><br>
+                <textarea maxlength="20" id="fileName">Unnamed_Image.png</textarea><br>
+                <label class="warning" id="maxLength">*Max length of 20 characters reached.<br></label>
+                <label class="warning" id="required">*A name is required for download.<br></label>
+                <button id="download" onclick="downloadImage()">Download</button>
+            </fieldset>
+        </div>
+
+        <div id="colorBar">
+            <button class="color" id="c1"></button>
+            <button class="color" id="c2"></button>
+            <button class="color" id="c3"></button>
+        </div>
+
+        <div class="container">
+            <div id="popup" class="move event animate">
+                <div id="colorBubble">
+                    <button id="exit" onclick="exit()">X</button>
+                    <div id="indicator"></div>
+    
+                    <div id="colorPicker">
+                        <label for="r">R:</label>
+                        <input type="range" class="rgb" name="r" id="r" min="0" max="255"></textarea><br>
+                        <label for="g">G:</label>
+                        <input type="range" class="rgb" name="g" id="g" min="0" max="255"></textarea><br>
+                        <label for="b">B:</label>
+                        <input type="range" class="rgb" name="b" id="b" min="0" max="255"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="colorFunctions.js"></script>
+    </body>
+</html>

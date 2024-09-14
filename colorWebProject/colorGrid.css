@@ -1,0 +1,184 @@
+body{
+    margin: 0px;
+}
+
+/* canvas */
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#grid{
+    display: grid;
+    justify-content: center;
+    gap: 0;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+    margin-top: 10px;
+}
+
+#myCanvas {
+    position: absolute;
+    border: 2px solid red;
+    height: 200px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+/* settings */
+
+#settings{
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+}
+
+fieldset{
+    max-width:fit-content;
+    margin-bottom: 10px;
+}
+
+#width{
+    margin-bottom: 10px;
+}
+
+/* select options */
+
+.outline{
+    border: 2px solid #00000090;
+}
+
+.highlight{
+    background-color: rgb(230, 230, 230);
+}
+
+input[name="selecting"]{
+    margin: 5px auto;
+}
+
+/* export */
+
+.download{
+    width: 110px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+#fileName{
+    resize: none;
+    font-size: 20px;
+}
+
+.warning{
+    color: red;
+    display: none;
+}
+
+/* colors */
+
+#colorBar{
+    background-color: bisque;
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.color{
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#c1{
+    background-color: blue;
+}
+
+#c2{
+    background-color: red;
+}
+
+#c3{
+    background-color: yellow;
+}
+
+#colorBubble{
+    width: 300px;
+    height: 200px;
+    background-color: bisque;
+    border-radius: 10px;
+    position: absolute;
+    /*
+    set to hidden on JS line 310
+    */
+}
+
+#popup{
+    overflow: hidden;
+    width: 300px;
+    height: 235px;
+    bottom: 200px;
+    position: fixed;
+}
+
+/** ANIMATION **/
+.animate,.animate>div{
+    transition:transform .275s linear;
+}
+
+/** TRANSFORMATION **/
+.shift{
+    transform:translateY(500px);
+}
+.shift>div{
+    transform:translateY(-500px);
+}
+
+#exit{
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+
+    background-color: red;
+    color: white;
+    border: none;
+
+    margin: 0 91.5%;
+    cursor: pointer;
+}
+
+#indicator{
+    background-color: bisque;
+    height: 50px;
+    width: 50px;
+    position:absolute;
+    bottom: -25px;
+    left: 30px;
+    rotate: 45deg;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+#colorPicker{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rgb{
+    width: 255px;
+}
