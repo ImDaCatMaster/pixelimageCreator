@@ -1,0 +1,8 @@
+9/13/2024: Project committed.
+  Features:
+    -Pixelated canvas that can be resized by the user from 1px to 8px in height and length.
+    -Pixels can be navigated around by the ARROW keys on the keyboard.
+    -Pixel selection marker can be changed between outline, highlight, both, and none.
+    -Image can be downloaded with a user chosen name.
+    -3-color-palette that can be customized by selecting an individual color and change the rgb slider values in the animated pop-up.
+    -Clicking the ENTER key on the keyboard flips through the 3-color-palette.
